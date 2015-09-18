@@ -1,3 +1,5 @@
+FiltertableProductTable Structure
+
 -filterableProductTable
 	-Search Bar
 	-ProductTable
