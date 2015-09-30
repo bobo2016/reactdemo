@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style type="text/css">
+      body{
+        padding: 20px;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <script type="text/jsx">
+      var SignupForm = React.createClass({
+        getInitialState: function(){
+          return {
+            value : "hello"
+          }
+        },
+        handleChange : function(){
+          this.setState({value: event.target.value})
+        },
+
+        render: function(){
+          var value = this.state.value;
+          return (
+            <input type="text" value={value} onChange={this.handleChange}/>
+          )
+        }    
+      })
+      React.render(<SignupForm></SignupForm>,document.body);
+    </script>
+  </body>
+</html>
